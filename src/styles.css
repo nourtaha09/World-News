@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(44, 44, 44) !important;
+  color: white !important;
+}
+
+.nav__main_div {
+  margin-inline: auto;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+a {
+  position: relative;
+}
+a::before {
+  content: "";
+  bottom: -6px;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 5px;
+  border-radius: 20px;
+  background-color: rgb(255, 181, 154);
+  transition: 0.3s all ease;
+}
+a:hover::before {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+.nav__div {
+  display: flex;
+  gap: 40px;
+  margin-left: 100px;
+}
+
+.news-contener {
+  padding-inline: 50px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.new__div {
+  display: flex;
+  gap: 80px;
+  padding: 30px 60px;
+  border-radius: 10px;
+  background-color: rgba(62, 62, 62, 0.475);
+}
+.new__div {
+  position: relative;
+  margin-bottom: 20px;
+}
+.new__div h4 {
+  margin-bottom: 10px;
+}
+.new__div p {
+  position: relative;
+  color: gainsboro;
+}
+.new__div img {
+  width: 400px;
+}
