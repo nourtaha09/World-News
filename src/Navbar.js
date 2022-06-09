@@ -17,23 +17,16 @@ const Navbar = ({ time, setTime }) => {
             setTime("week");
           }}
         >
-          This Week{" "}
+          Last 7 Days{" "}
         </a>
         <a
           onClick={() => {
             setTime("month");
           }}
         >
-          This Month
+          Last 30 Days
         </a>
-        <a
-          onClick={() => {
-            setTime("year");
-          }}
-        >
-          {" "}
-          this Year
-        </a>
+
       </div>
     </div>
   );
