@@ -7,16 +7,16 @@ const InsiderNews = ({ setTargetData, setEditNewId }) => {
   const [data, setData] = useState([]);
   const deleteHandler = (e) => {
     axios.delete(
-      `https://62a496bc47e6e400639562ed.mockapi.io/news/news/${e.target.parentNode.id}`
+      `https://62a4b82747e6e400639756c3.mockapi.io/news/${e.target.parentNode.id}`
     );
     axios
-      .get("https://62a496bc47e6e400639562ed.mockapi.io/news/news")
+      .get("https://62a4b82747e6e400639756c3.mockapi.io/news")
       .then((data) => setData(data.data));
   };
 
   useEffect(() => {
     axios
-      .get("https://62a496bc47e6e400639562ed.mockapi.io/news/news")
+      .get("https://62a4b82747e6e400639756c3.mockapi.io/news")
       .then((data) => setData(data.data));
   }, []);
 

@@ -10,13 +10,13 @@ const Register = () => {
   }, [users]);
   useEffect(() => {
     axios
-      .get("https://62a496bc47e6e400639562ed.mockapi.io/news/users")
+      .get("https://62a4b82747e6e400639756c3.mockapi.io/users")
       .then((data) => setUsers(data.data));
   }, []);
   const submitHandler = (e) => {
     e.preventDefault();
     axios
-      .get("https://62a496bc47e6e400639562ed.mockapi.io/news/users")
+      .get("https://62a4b82747e6e400639756c3.mockapi.io/users")
       .then((data) => setUsers(data.data));
     if (users.some((item) => item.email === ref?.current?.value)) {
       document.querySelector("#email_lable").style.color = "red";
@@ -25,7 +25,7 @@ const Register = () => {
     } else {
       document.querySelector("#email_lable").style.color = "white";
       document.querySelector("#form_text").innerText = "";
-      axios.post("https://62a496bc47e6e400639562ed.mockapi.io/news/users", {
+      axios.post("https://62a4b82747e6e400639756c3.mockapi.io/users", {
         email: ref.current.value,
         pass: passRef.current.value,
       });

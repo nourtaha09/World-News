@@ -11,7 +11,7 @@ const LoginPage = ({ setEmail, setPass }) => {
 
   useEffect(() => {
     axios
-      .get("https://62a496bc47e6e400639562ed.mockapi.io/news/users")
+      .get("https://62a4b82747e6e400639756c3.mockapi.io/users")
       .then((data) => setUsers(data.data));
   }, []);
   const submitHandler = (e) => {
@@ -19,7 +19,7 @@ const LoginPage = ({ setEmail, setPass }) => {
     setEmail(ref.current.value);
     setPass(passRef.current.value);
     axios
-      .get("https://62a496bc47e6e400639562ed.mockapi.io/news/users")
+      .get("https://62a4b82747e6e400639756c3.mockapi.io/users")
       .then((data) => setUsers(data.data));
     if (
       users.some((item) => item.email === ref?.current?.value) &&

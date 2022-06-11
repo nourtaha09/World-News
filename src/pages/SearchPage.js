@@ -21,7 +21,7 @@ const SearchPage = ({ searchedNews, setTargetData }) => {
               <h4>{item.headline.main}</h4>
               <p className="new__desc">{item.abstract}</p>
             </div>
-            <img src="https://guide.worksmobile.com/en/images/tips-img-19@2x.png" />
+            <img style={{maxHight:"100px"}} src="" />
           </div>
         ))}
       </div>

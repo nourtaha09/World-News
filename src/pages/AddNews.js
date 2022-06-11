@@ -11,14 +11,14 @@ const AddNews = ({ setImg, img, editNewId, edit }) => {
     e.preventDefault();
     edit
       ? axios.put(
-          `https://62a496bc47e6e400639562ed.mockapi.io/news/news/${editNewId}`,
+          `https://62a4b82747e6e400639756c3.mockapi.io/news/${editNewId}`,
           {
             img: img,
             text: textRef?.current?.value,
             title: titleRef?.current?.value,
           }
         )
-      : axios.post("https://62a496bc47e6e400639562ed.mockapi.io/news/news", {
+      : axios.post("https://62a4b82747e6e400639756c3.mockapi.io/news", {
           img: img,
           text: textRef?.current?.value,
           title: titleRef?.current?.value,

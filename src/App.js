@@ -33,6 +33,7 @@ function App() {
   }, []);
   let url =
     "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=VuPZDkaRmf37FSeSAdcY9tjl2o8GkMwu";
+    
   if (time === "today") {
     url = `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=VuPZDkaRmf37FSeSAdcY9tjl2o8GkMwu`;
   } else if (time === "week") {
