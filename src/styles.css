@@ -50,24 +50,126 @@ a {
   margin-inline: auto;
 }
 
-.new__div {
+.new__div,
+.newInsider__div {
   display: flex;
   gap: 80px;
   padding: 30px 60px;
   border-radius: 10px;
   background-color: rgba(62, 62, 62, 0.475);
-}
-.new__div {
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
+  z-index: 5;
 }
-.new__div h4 {
+
+.new__text {
+  pointer-events: none;
+  max-width: 600px;
+  width: 70%;
+  min-width: 300px;
+}
+.new__div h4,
+.newInsider__div h4 {
   margin-bottom: 10px;
+  pointer-events: none;
 }
-.new__div p {
+
+.new__desc {
   position: relative;
   color: gainsboro;
+  pointer-events: none;
 }
-.new__div img {
-  width: 400px;
+.newImg {
+  pointer-events: none;
+  width: 40%;
+}
+.new__text {
+  margin-top: 50px;
+}
+.newPage__div {
+  padding-inline: 100px;
+}
+
+path {
+  pointer-events: none;
+}
+
+svg {
+  z-index: 30;
+  cursor: pointer;
+}
+.nav__icon {
+  display: none;
+}
+
+form {
+  margin-bottom: 30px;
+}
+@media (max-width: 1299px) {
+  .new__div img,
+  .newInsider__div img {
+    width: 50%;
+    min-width: 200px;
+  }
+}
+@media (max-width: 1062px) {
+  .new__desc {
+    display: none;
+  }
+  .new__text {
+    width: 60%;
+    min-width: 200px;
+  }
+  .new__text h4 {
+    position: relative;
+    bottom: 20px;
+    width: 60%;
+    min-width: 200px;
+    font-size: 17px;
+  }
+  .newInsider__div,
+  .new__div {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 572px) {
+  .news-contener {
+    padding-inline: 20px;
+  }
+  .newInsider__div,
+  .new__div {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* nav media query  */
+@media (max-width: 887px) {
+  .nav__div {
+    display: none;
+  }
+  .nav__icon {
+    display: block;
+  }
+  .nav__main_div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .open__nav {
+    display: block;
+    position: fixed;
+    margin: 0;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(44, 44, 44) !important;
+  }
 }
